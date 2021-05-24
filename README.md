@@ -36,7 +36,7 @@ Step III:
 
 Run docker build:
 
-`docker build -t jenkins-testim:latest .`
+`docker build -t jenkins-test:latest .`
 
 Step IV:
 
@@ -44,7 +44,7 @@ Use previous image to run Jenkins:
 
 ```
 docker run \
-  --name jenkins-blueocean \
+  --name jenkins-test \
   --rm \
   --detach \
   --network jenkins \
@@ -55,5 +55,5 @@ docker run \
   --publish 50000:50000 \
   --volume jenkins-data:/var/jenkins_home \
   --volume jenkins-docker-certs:/certs/client:ro \
-  jenkins-testim:latest
+  jenkins-test:latest
 ```
